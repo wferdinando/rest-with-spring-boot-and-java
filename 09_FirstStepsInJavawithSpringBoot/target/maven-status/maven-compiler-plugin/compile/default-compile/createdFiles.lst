@@ -1,0 +1,9 @@
+br/com/wfsystems/model/Person.class
+br/com/wfsystems/controllers/PersonController.class
+br/com/wfsystems/Startup.class
+br/com/wfsystems/services/PersonServices.class
+br/com/wfsystems/exceptions/ResourceNotFoundException.class
+br/com/wfsystems/repository/PersonRepository.class
+br/com/wfsystems/exceptions/handler/CustomEntityResponseHandler.class
+br/com/wfsystems/exceptions/ExceptionResponse.class
+br/com/wfsystems/controllers/TesteLogController.class
