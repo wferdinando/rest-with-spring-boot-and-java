@@ -1,0 +1,3 @@
+br/com/wfsystems/StartupTests.class
+br/com/wfsystems/unitetests/mapper/ObjectMapperTests.class
+br/com/wfsystems/unitetests/mapper/mocks/MockPerson.class
