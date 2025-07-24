@@ -1,0 +1,16 @@
+br/com/wfsystems/serialization/converter/YamlJackson2HttpMessageConverter.class
+br/com/wfsystems/model/Person.class
+br/com/wfsystems/exceptions/ResourceNotFoundException.class
+br/com/wfsystems/mapper/ObjectMapper.class
+br/com/wfsystems/data/dto/v1/PersonDTO.class
+br/com/wfsystems/repository/PersonRepository.class
+br/com/wfsystems/mapper/custom/PersonMapper.class
+br/com/wfsystems/exceptions/ExceptionResponse.class
+br/com/wfsystems/exceptions/RequiredObjectIsNullException.class
+br/com/wfsystems/controllers/TesteLogController.class
+br/com/wfsystems/config/WebConfig.class
+br/com/wfsystems/controllers/PersonController.class
+br/com/wfsystems/Startup.class
+br/com/wfsystems/services/PersonServices.class
+br/com/wfsystems/exceptions/handler/CustomEntityResponseHandler.class
+br/com/wfsystems/data/dto/v2/PersonDTOV2.class

@@ -1,0 +1,4 @@
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/14_HATEOAS/src/test/java/br/com/wfsystems/StartupTests.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/14_HATEOAS/src/test/java/br/com/wfsystems/services/PersonServicesTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/14_HATEOAS/src/test/java/br/com/wfsystems/unitetests/mapper/ObjectMapperTests.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/14_HATEOAS/src/test/java/br/com/wfsystems/unitetests/mapper/mocks/MockPerson.java
