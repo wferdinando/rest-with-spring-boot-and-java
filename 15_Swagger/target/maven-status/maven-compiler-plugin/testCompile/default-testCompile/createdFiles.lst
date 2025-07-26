@@ -1,0 +1,6 @@
+br/com/wfsystems/StartupTests.class
+br/com/wfsystems/unitetests/mapper/ObjectMapperTests.class
+br/com/wfsystems/unitetests/mapper/MockBook.class
+br/com/wfsystems/services/BookServicesTest.class
+br/com/wfsystems/services/PersonServicesTest.class
+br/com/wfsystems/unitetests/mapper/mocks/MockPerson.class
