@@ -1,0 +1,9 @@
+br/com/wfsystems/unittests/mapper/MockBook.class
+br/com/wfsystems/integrationtests/swagger/SwaggerIntegrationTest.class
+br/com/wfsystems/config/TestConfigs.class
+br/com/wfsystems/unittests/services/BookServicesTest.class
+br/com/wfsystems/integrationtests/testcontainers/AbstractIntegrationTest$Initializer.class
+br/com/wfsystems/integrationtests/testcontainers/AbstractIntegrationTest.class
+br/com/wfsystems/unittests/mapper/mocks/MockPerson.class
+br/com/wfsystems/unittests/services/PersonServicesTest.class
+br/com/wfsystems/unittests/mapper/ObjectMapperTests.class

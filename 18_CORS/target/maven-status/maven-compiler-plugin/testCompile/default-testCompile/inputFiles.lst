@@ -1,0 +1,8 @@
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/config/TestConfigs.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/integrationtests/swagger/SwaggerIntegrationTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/integrationtests/testcontainers/AbstractIntegrationTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/unittests/mapper/MockBook.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/unittests/mapper/ObjectMapperTests.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/unittests/mapper/mocks/MockPerson.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/unittests/services/BookServicesTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/17_TesteIntegracao/src/test/java/br/com/wfsystems/unittests/services/PersonServicesTest.java
