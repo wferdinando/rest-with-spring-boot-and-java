@@ -1,0 +1,12 @@
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/config/TestConfigs.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/integrationtests/controllers/cors/withjson/PersonControllerCorsTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/integrationtests/controllers/cors/withxml/PersonControllerXmlTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/integrationtests/controllers/withjson/PersonControllerJsonTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/integrationtests/dto/PersonDTO.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/integrationtests/swagger/SwaggerIntegrationTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/integrationtests/testcontainers/AbstractIntegrationTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/services/BookServicesTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/services/PersonServicesTest.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/unittests/mapper/MockBook.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/unittests/mapper/ObjectMapperTests.java
+/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/src/test/java/br/com/wfsystems/unittests/mapper/mocks/MockPerson.java
