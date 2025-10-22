@@ -1,25 +1,19 @@
 package br.com.wfsystems.services;
 
-import static br.com.wfsystems.mapper.ObjectMapper.parseListObjects;
 import static br.com.wfsystems.mapper.ObjectMapper.parseObject;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
-
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;
-import org.springframework.hateoas.Links;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.wfsystems.controllers.PersonController;
@@ -58,6 +52,23 @@ public class PersonServices {
         logger.info("Finding All People!");
 
         Page<Person> people = repository.findAll(pageable);
+        var peopleWithLinks = people.map(person -> {
+            PersonDTO personDTO = parseObject(person, PersonDTO.class);
+            addHateoasLinks(personDTO);
+            return personDTO;
+        });
+
+        Link findAllLink = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(PersonController.class)
+                .findAll(pageable.getPageNumber(), pageable.getPageSize(), String.valueOf(pageable.getSort())))
+                .withSelfRel();
+
+        return assembler.toModel(peopleWithLinks, findAllLink);
+    }
+
+    public PagedModel<EntityModel<PersonDTO>> findByName(String firstName, Pageable pageable) {
+        logger.info("Finding People by Name!");
+
+        Page<Person> people = repository.findPeopleByName(firstName, pageable);
         var peopleWithLinks = people.map(person -> {
             PersonDTO personDTO = parseObject(person, PersonDTO.class);
             addHateoasLinks(personDTO);
