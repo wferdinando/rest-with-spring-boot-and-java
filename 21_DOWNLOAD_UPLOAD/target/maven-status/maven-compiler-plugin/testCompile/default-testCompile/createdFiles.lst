@@ -1,0 +1,15 @@
+br/com/wfsystems/integrationtests/controllers/cors/withjson/PersonControllerCorsTest.class
+br/com/wfsystems/services/BookServicesTest.class
+br/com/wfsystems/integrationtests/controllers/cors/withxml/PersonControllerXmlTest.class
+br/com/wfsystems/integrationtests/testcontainers/AbstractIntegrationTest$Initializer.class
+br/com/wfsystems/integrationtests/dto/PersonDTO.class
+br/com/wfsystems/integrationtests/testcontainers/AbstractIntegrationTest.class
+br/com/wfsystems/integrationtests/controllers/withjson/PersonControllerJsonTest$1.class
+br/com/wfsystems/services/PersonServicesTest.class
+br/com/wfsystems/unittests/mapper/MockBook.class
+br/com/wfsystems/integrationtests/controllers/withjson/PersonControllerJsonTest.class
+br/com/wfsystems/integrationtests/swagger/SwaggerIntegrationTest.class
+br/com/wfsystems/config/TestConfigs.class
+br/com/wfsystems/unittests/mapper/mocks/MockPerson.class
+br/com/wfsystems/integrationtests/controllers/cors/withxml/PersonControllerXmlTest$1.class
+br/com/wfsystems/unittests/mapper/ObjectMapperTests.class
