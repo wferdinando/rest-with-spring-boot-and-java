@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest" time="40.771" tests="6" errors="1" skipped="0" failures="3">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/target/test-classes:/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/target/classes:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.0/spring-boot-starter-web-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.0/spring-boot-starter-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.0/spring-boot-starter-logging-3.4.0.jar:/home/willyan/.m2/repository/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12.jar:/home/willyan/.m2/repository/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12.jar:/home/willyan/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.1/log4j-to-slf4j-2.24.1.jar:/home/willyan/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar:/home/willyan/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/home/willyan/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.0/spring-boot-starter-json-3.4.0.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.1/jackson-datatype-jdk8-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.1/jackson-module-parameter-names-2.18.1.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.0/spring-boot-starter-tomcat-3.4.0.jar:/home/willyan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.33/tomcat-embed-core-10.1.33.jar:/home/willyan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.33/tomcat-embed-el-10.1.33.jar:/home/willyan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.33/tomcat-embed-websocket-10.1.33.jar:/home/willyan/.m2/repository/org/springframework/spring-web/6.2.0/spring-web-6.2.0.jar:/home/willyan/.m2/repository/io/micrometer/micrometer-observation/1.14.1/micrometer-observation-1.14.1.jar:/home/willyan/.m2/repository/io/micrometer/micrometer-commons/1.14.1/micrometer-commons-1.14.1.jar:/home/willyan/.m2/repository/org/springframework/spring-webmvc/6.2.0/spring-webmvc-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-expression/6.2.0/spring-expression-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.4.0/spring-boot-starter-data-jpa-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.4.0/spring-boot-starter-jdbc-3.4.0.jar:/home/willyan/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/home/willyan/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar:/home/willyan/.m2/repository/org/hibernate/orm/hibernate-core/6.6.2.Final/hibernate-core-6.6.2.Final.jar:/home/willyan/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/willyan/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/willyan/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/willyan/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/willyan/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/willyan/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/willyan/.m2/repository/net/bytebuddy/byte-buddy/1.15.10/byte-buddy-1.15.10.jar:/home/willyan/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/willyan/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/willyan/.m2/repository/org/springframework/data/spring-data-jpa/3.4.0/spring-data-jpa-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/data/spring-data-commons/3.4.0/spring-data-commons-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/spring-orm/6.2.0/spring-orm-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-tx/6.2.0/spring-tx-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-aspects/6.2.0/spring-aspects-6.2.0.jar:/home/willyan/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/home/willyan/.m2/repository/org/springframework/hateoas/spring-hateoas/2.4.0/spring-hateoas-2.4.0.jar:/home/willyan/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-beans/6.2.0/spring-beans-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-jcl/6.2.0/spring-jcl-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0.jar:/home/willyan/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/willyan/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/willyan/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.7.0/springdoc-openapi-starter-webmvc-ui-2.7.0.jar:/home/willyan/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.7.0/springdoc-openapi-starter-webmvc-api-2.7.0.jar:/home/willyan/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.7.0/springdoc-openapi-starter-common-2.7.0.jar:/home/willyan/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.25/swagger-core-jakarta-2.2.25.jar:/home/willyan/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.25/swagger-annotations-jakarta-2.2.25.jar:/home/willyan/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.25/swagger-models-jakarta-2.2.25.jar:/home/willyan/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/willyan/.m2/repository/org/webjars/swagger-ui/5.18.2/swagger-ui-5.18.2.jar:/home/willyan/.m2/repository/org/webjars/webjars-locator-lite/1.0.1/webjars-locator-lite-1.0.1.jar:/home/willyan/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.18.1/jackson-dataformat-xml-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.1/jackson-core-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.1/jackson-annotations-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.1/jackson-databind-2.18.1.jar:/home/willyan/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.2/stax2-api-4.2.2.jar:/home/willyan/.m2/repository/com/fasterxml/woodstox/woodstox-core/7.0.0/woodstox-core-7.0.0.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.1/jackson-dataformat-yaml-2.18.1.jar:/home/willyan/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/home/willyan/.m2/repository/com/mysql/mysql-connector-j/9.1.0/mysql-connector-j-9.1.0.jar:/home/willyan/.m2/repository/org/flywaydb/flyway-core/10.20.1/flyway-core-10.20.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.18.1/jackson-dataformat-toml-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.1/jackson-datatype-jsr310-2.18.1.jar:/home/willyan/.m2/repository/org/flywaydb/flyway-mysql/10.20.1/flyway-mysql-10.20.1.jar:/home/willyan/.m2/repository/com/github/dozermapper/dozer-core/7.0.0/dozer-core-7.0.0.jar:/home/willyan/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/home/willyan/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/willyan/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/willyan/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/home/willyan/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/willyan/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/willyan/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/willyan/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/jaxb-xjc/4.0.5/jaxb-xjc-4.0.5.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/xsom/4.0.5/xsom-4.0.5.jar:/home/willyan/.m2/repository/com/sun/xml/bind/external/relaxng-datatype/4.0.5/relaxng-datatype-4.0.5.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/codemodel/4.0.5/codemodel-4.0.5.jar:/home/willyan/.m2/repository/com/sun/xml/bind/external/rngom/4.0.5/rngom-4.0.5.jar:/home/willyan/.m2/repository/com/sun/xml/dtd-parser/dtd-parser/1.5.1/dtd-parser-1.5.1.jar:/home/willyan/.m2/repository/com/sun/istack/istack-commons-tools/4.1.2/istack-commons-tools-4.1.2.jar:/home/willyan/.m2/repository/org/slf4j/jcl-over-slf4j/2.0.16/jcl-over-slf4j-2.0.16.jar:/home/willyan/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.4.0/spring-boot-starter-test-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-test/3.4.0/spring-boot-test-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.4.0/spring-boot-test-autoconfigure-3.4.0.jar:/home/willyan/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/home/willyan/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/home/willyan/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/home/willyan/.m2/repository/org/assertj/assertj-core/3.26.3/assertj-core-3.26.3.jar:/home/willyan/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/willyan/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.3/junit-jupiter-5.11.3.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.3/junit-jupiter-api-5.11.3.jar:/home/willyan/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/willyan/.m2/repository/org/junit/platform/junit-platform-commons/1.11.3/junit-platform-commons-1.11.3.jar:/home/willyan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.3/junit-jupiter-params-5.11.3.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.3/junit-jupiter-engine-5.11.3.jar:/home/willyan/.m2/repository/org/junit/platform/junit-platform-engine/1.11.3/junit-platform-engine-1.11.3.jar:/home/willyan/.m2/repository/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar:/home/willyan/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.10/byte-buddy-agent-1.15.10.jar:/home/willyan/.m2/repository/org/mockito/mockito-junit-jupiter/5.14.2/mockito-junit-jupiter-5.14.2.jar:/home/willyan/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/willyan/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/willyan/.m2/repository/org/springframework/spring-test/6.2.0/spring-test-6.2.0.jar:/home/willyan/.m2/repository/org/xmlunit/xmlunit-core/2.10.0/xmlunit-core-2.10.0.jar:/home/willyan/.m2/repository/org/testcontainers/mysql/1.20.4/mysql-1.20.4.jar:/home/willyan/.m2/repository/org/testcontainers/jdbc/1.20.4/jdbc-1.20.4.jar:/home/willyan/.m2/repository/org/testcontainers/database-commons/1.20.4/database-commons-1.20.4.jar:/home/willyan/.m2/repository/org/testcontainers/testcontainers/1.20.4/testcontainers-1.20.4.jar:/home/willyan/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/willyan/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/willyan/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/home/willyan/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/home/willyan/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/home/willyan/.m2/repository/com/github/docker-java/docker-java-api/3.4.0/docker-java-api-3.4.0.jar:/home/willyan/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.4.0/docker-java-transport-zerodep-3.4.0.jar:/home/willyan/.m2/repository/com/github/docker-java/docker-java-transport/3.4.0/docker-java-transport-3.4.0.jar:/home/willyan/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/home/willyan/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/willyan/.m2/repository/org/apache/groovy/groovy/4.0.24/groovy-4.0.24.jar:/home/willyan/.m2/repository/org/apache/groovy/groovy-xml/4.0.24/groovy-xml-4.0.24.jar:/home/willyan/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/willyan/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/willyan/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/willyan/.m2/repository/commons-codec/commons-codec/1.17.1/commons-codec-1.17.1.jar:/home/willyan/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/willyan/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/willyan/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/willyan/.m2/repository/org/apache/groovy/groovy-json/4.0.24/groovy-json-4.0.24.jar:/home/willyan/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/willyan/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-devtools/3.4.0/spring-boot-devtools-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot/3.4.0/spring-boot-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.0/spring-boot-autoconfigure-3.4.0.jar:"/>
+    <property name="java.vm.vendor" value="Azul Systems, Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="catalina.useNaming" value="false"/>
+    <property name="java.vendor.url" value="http://www.azul.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="APPLICATION_NAME" value="rest-with-spring-boot-and-java"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/willyan/.sdkman/candidates/java/21.0.4-zulu/lib"/>
+    <property name="sun.java.command" value="/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/target/surefire/surefirebooter-20250825180635079_3.jar /home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/target/surefire 2025-08-25T18-06-34_950-jvmRun1 surefire-20250825180635079_1tmp surefire_0-20250825180635079_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/target/test-classes:/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/target/classes:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.0/spring-boot-starter-web-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.0/spring-boot-starter-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.0/spring-boot-starter-logging-3.4.0.jar:/home/willyan/.m2/repository/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12.jar:/home/willyan/.m2/repository/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12.jar:/home/willyan/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.1/log4j-to-slf4j-2.24.1.jar:/home/willyan/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar:/home/willyan/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/home/willyan/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.0/spring-boot-starter-json-3.4.0.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.1/jackson-datatype-jdk8-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.1/jackson-module-parameter-names-2.18.1.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.0/spring-boot-starter-tomcat-3.4.0.jar:/home/willyan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.33/tomcat-embed-core-10.1.33.jar:/home/willyan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.33/tomcat-embed-el-10.1.33.jar:/home/willyan/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.33/tomcat-embed-websocket-10.1.33.jar:/home/willyan/.m2/repository/org/springframework/spring-web/6.2.0/spring-web-6.2.0.jar:/home/willyan/.m2/repository/io/micrometer/micrometer-observation/1.14.1/micrometer-observation-1.14.1.jar:/home/willyan/.m2/repository/io/micrometer/micrometer-commons/1.14.1/micrometer-commons-1.14.1.jar:/home/willyan/.m2/repository/org/springframework/spring-webmvc/6.2.0/spring-webmvc-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-expression/6.2.0/spring-expression-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.4.0/spring-boot-starter-data-jpa-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.4.0/spring-boot-starter-jdbc-3.4.0.jar:/home/willyan/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/home/willyan/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar:/home/willyan/.m2/repository/org/hibernate/orm/hibernate-core/6.6.2.Final/hibernate-core-6.6.2.Final.jar:/home/willyan/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/willyan/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/willyan/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/willyan/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/willyan/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/willyan/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/willyan/.m2/repository/net/bytebuddy/byte-buddy/1.15.10/byte-buddy-1.15.10.jar:/home/willyan/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/willyan/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/willyan/.m2/repository/org/springframework/data/spring-data-jpa/3.4.0/spring-data-jpa-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/data/spring-data-commons/3.4.0/spring-data-commons-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/spring-orm/6.2.0/spring-orm-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-tx/6.2.0/spring-tx-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-aspects/6.2.0/spring-aspects-6.2.0.jar:/home/willyan/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/home/willyan/.m2/repository/org/springframework/hateoas/spring-hateoas/2.4.0/spring-hateoas-2.4.0.jar:/home/willyan/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-beans/6.2.0/spring-beans-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/spring-jcl/6.2.0/spring-jcl-6.2.0.jar:/home/willyan/.m2/repository/org/springframework/plugin/spring-plugin-core/3.0.0/spring-plugin-core-3.0.0.jar:/home/willyan/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/willyan/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/willyan/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.7.0/springdoc-openapi-starter-webmvc-ui-2.7.0.jar:/home/willyan/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.7.0/springdoc-openapi-starter-webmvc-api-2.7.0.jar:/home/willyan/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.7.0/springdoc-openapi-starter-common-2.7.0.jar:/home/willyan/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.25/swagger-core-jakarta-2.2.25.jar:/home/willyan/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.25/swagger-annotations-jakarta-2.2.25.jar:/home/willyan/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.25/swagger-models-jakarta-2.2.25.jar:/home/willyan/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/willyan/.m2/repository/org/webjars/swagger-ui/5.18.2/swagger-ui-5.18.2.jar:/home/willyan/.m2/repository/org/webjars/webjars-locator-lite/1.0.1/webjars-locator-lite-1.0.1.jar:/home/willyan/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.18.1/jackson-dataformat-xml-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.1/jackson-core-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.1/jackson-annotations-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.1/jackson-databind-2.18.1.jar:/home/willyan/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.2/stax2-api-4.2.2.jar:/home/willyan/.m2/repository/com/fasterxml/woodstox/woodstox-core/7.0.0/woodstox-core-7.0.0.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.18.1/jackson-dataformat-yaml-2.18.1.jar:/home/willyan/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/home/willyan/.m2/repository/com/mysql/mysql-connector-j/9.1.0/mysql-connector-j-9.1.0.jar:/home/willyan/.m2/repository/org/flywaydb/flyway-core/10.20.1/flyway-core-10.20.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.18.1/jackson-dataformat-toml-2.18.1.jar:/home/willyan/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.1/jackson-datatype-jsr310-2.18.1.jar:/home/willyan/.m2/repository/org/flywaydb/flyway-mysql/10.20.1/flyway-mysql-10.20.1.jar:/home/willyan/.m2/repository/com/github/dozermapper/dozer-core/7.0.0/dozer-core-7.0.0.jar:/home/willyan/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/home/willyan/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/willyan/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/willyan/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:/home/willyan/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/willyan/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/willyan/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/willyan/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/jaxb-xjc/4.0.5/jaxb-xjc-4.0.5.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/xsom/4.0.5/xsom-4.0.5.jar:/home/willyan/.m2/repository/com/sun/xml/bind/external/relaxng-datatype/4.0.5/relaxng-datatype-4.0.5.jar:/home/willyan/.m2/repository/org/glassfish/jaxb/codemodel/4.0.5/codemodel-4.0.5.jar:/home/willyan/.m2/repository/com/sun/xml/bind/external/rngom/4.0.5/rngom-4.0.5.jar:/home/willyan/.m2/repository/com/sun/xml/dtd-parser/dtd-parser/1.5.1/dtd-parser-1.5.1.jar:/home/willyan/.m2/repository/com/sun/istack/istack-commons-tools/4.1.2/istack-commons-tools-4.1.2.jar:/home/willyan/.m2/repository/org/slf4j/jcl-over-slf4j/2.0.16/jcl-over-slf4j-2.0.16.jar:/home/willyan/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.4.0/spring-boot-starter-test-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-test/3.4.0/spring-boot-test-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.4.0/spring-boot-test-autoconfigure-3.4.0.jar:/home/willyan/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/home/willyan/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/home/willyan/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/home/willyan/.m2/repository/org/assertj/assertj-core/3.26.3/assertj-core-3.26.3.jar:/home/willyan/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/willyan/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.3/junit-jupiter-5.11.3.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.3/junit-jupiter-api-5.11.3.jar:/home/willyan/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/willyan/.m2/repository/org/junit/platform/junit-platform-commons/1.11.3/junit-platform-commons-1.11.3.jar:/home/willyan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.3/junit-jupiter-params-5.11.3.jar:/home/willyan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.3/junit-jupiter-engine-5.11.3.jar:/home/willyan/.m2/repository/org/junit/platform/junit-platform-engine/1.11.3/junit-platform-engine-1.11.3.jar:/home/willyan/.m2/repository/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar:/home/willyan/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.10/byte-buddy-agent-1.15.10.jar:/home/willyan/.m2/repository/org/mockito/mockito-junit-jupiter/5.14.2/mockito-junit-jupiter-5.14.2.jar:/home/willyan/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/willyan/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/willyan/.m2/repository/org/springframework/spring-test/6.2.0/spring-test-6.2.0.jar:/home/willyan/.m2/repository/org/xmlunit/xmlunit-core/2.10.0/xmlunit-core-2.10.0.jar:/home/willyan/.m2/repository/org/testcontainers/mysql/1.20.4/mysql-1.20.4.jar:/home/willyan/.m2/repository/org/testcontainers/jdbc/1.20.4/jdbc-1.20.4.jar:/home/willyan/.m2/repository/org/testcontainers/database-commons/1.20.4/database-commons-1.20.4.jar:/home/willyan/.m2/repository/org/testcontainers/testcontainers/1.20.4/testcontainers-1.20.4.jar:/home/willyan/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/willyan/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/willyan/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/home/willyan/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/home/willyan/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/home/willyan/.m2/repository/com/github/docker-java/docker-java-api/3.4.0/docker-java-api-3.4.0.jar:/home/willyan/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.4.0/docker-java-transport-zerodep-3.4.0.jar:/home/willyan/.m2/repository/com/github/docker-java/docker-java-transport/3.4.0/docker-java-transport-3.4.0.jar:/home/willyan/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/home/willyan/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/willyan/.m2/repository/org/apache/groovy/groovy/4.0.24/groovy-4.0.24.jar:/home/willyan/.m2/repository/org/apache/groovy/groovy-xml/4.0.24/groovy-xml-4.0.24.jar:/home/willyan/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/willyan/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/willyan/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/willyan/.m2/repository/commons-codec/commons-codec/1.17.1/commons-codec-1.17.1.jar:/home/willyan/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/willyan/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/willyan/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/willyan/.m2/repository/org/apache/groovy/groovy-json/4.0.24/groovy-json-4.0.24.jar:/home/willyan/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/willyan/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-devtools/3.4.0/spring-boot-devtools-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot/3.4.0/spring-boot-3.4.0.jar:/home/willyan/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.0/spring-boot-autoconfigure-3.4.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/willyan"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="/home/willyan/.sdkman/candidates/java/21.0.4-zulu"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH/target/surefire/surefirebooter-20250825180635079_3.jar"/>
+    <property name="polyglot.engine.WarnInterpreterOnly" value="false"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.4+7-LTS"/>
+    <property name="user.name" value="willyan"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.90.3-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Zulu21.36+17-CA"/>
+    <property name="localRepository" value="/home/willyan/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://www.azul.com/support/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="catalina.home" value="/tmp/tomcat.8888.1800470273824676559"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="21.0.4"/>
+    <property name="user.dir" value="/home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="66873"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="catalina.base" value="/tmp/tomcat.8888.1800470273824676559"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Azul Systems, Inc."/>
+    <property name="java.vm.version" value="21.0.4+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[rest-with-spring-boot-and-java] "/>
+  </properties>
+  <testcase name="testCreate" classname="br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest" time="3.342">
+    <system-out><![CDATA[18:06:36.519 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.com.wfsystems.integrationtests.testcontainers.AbstractIntegrationTest]: AbstractIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:06:36.818 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.wfsystems.Startup for test class br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest
+18:06:37.748 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+18:06:37.753 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+18:06:37.891 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-08-25T18:06:38.575-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : Testcontainers version: 1.20.4
+2025-08-25T18:06:39.019-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-08-25T18:06:39.494-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-08-25T18:06:39.497-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2025-08-25T18:06:39.527-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 28.2.2
+  API Version: 1.50
+  Operating System: Ubuntu 22.04.5 LTS
+  Total Memory: 7646 MB
+2025-08-25T18:06:39.570-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.testcontainers/ryuk:0.11.0            : Creating container for image: testcontainers/ryuk:0.11.0
+2025-08-25T18:06:39.853-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.testcontainers/ryuk:0.11.0            : Container testcontainers/ryuk:0.11.0 is starting: 2a2f9f6e79555ffe8ee2d456fdad60a4614a4ef772b8733135fd836a33c596fd
+2025-08-25T18:06:40.502-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.testcontainers/ryuk:0.11.0            : Container testcontainers/ryuk:0.11.0 started in PT0.931504377S
+2025-08-25T18:06:40.511-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-08-25T18:06:40.512-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : Checking the system...
+2025-08-25T18:06:40.513-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2025-08-25T18:06:40.517-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.mysql:9.1.0                           : Creating container for image: mysql:9.1.0
+2025-08-25T18:06:40.664-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.mysql:9.1.0                           : Container mysql:9.1.0 is starting: 7aa454e8fe42db8576ae9d68fd4cfdab6d085f203b0c95cd45a1070a942e62e9
+2025-08-25T18:06:41.144-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.mysql:9.1.0                           : Waiting for database connection to become available at jdbc:mysql://localhost:32797/test using query 'SELECT 1'
+2025-08-25T18:07:02.761-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.mysql:9.1.0                           : Container mysql:9.1.0 started in PT22.244180101S
+2025-08-25T18:07:02.763-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [ers-lifecycle-0] tc.mysql:9.1.0                           : Container is started (JDBC URL: jdbc:mysql://localhost:32797/test)
+2025-08-25T18:07:02.780-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] b.c.w.i.c.c.w.PersonControllerXmlTest    : Starting PersonControllerXmlTest using Java 21.0.4 with PID 66873 (started by willyan in /home/willyan/workspace/cursos/rest-with-spring-boot-and-java/19_PATCH)
+2025-08-25T18:07:02.782-03:00 DEBUG 66873 --- [rest-with-spring-boot-and-java] [           main] b.c.w.i.c.c.w.PersonControllerXmlTest    : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-08-25T18:07:02.785-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] b.c.w.i.c.c.w.PersonControllerXmlTest    : No active profile set, falling back to 1 default profile: "default"
+2025-08-25T18:07:04.187-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-25T18:07:04.314-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2025-08-25T18:07:05.172-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2025-08-25T18:07:05.192-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-25T18:07:05.193-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-08-25T18:07:05.273-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-25T18:07:05.275-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2188 ms
+2025-08-25T18:07:05.616-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-25T18:07:05.893-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@549d14fe
+2025-08-25T18:07:05.895-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-25T18:07:05.960-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:32797/test (MySQL 9.1)
+2025-08-25T18:07:06.293-03:00  WARN 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MySQL 9.1 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2025-08-25T18:07:06.336-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `test`.`flyway_schema_history` does not exist yet
+2025-08-25T18:07:06.344-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.035s)
+2025-08-25T18:07:06.405-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `test`.`flyway_schema_history` ...
+2025-08-25T18:07:06.558-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `test`: << Empty Schema >>
+2025-08-25T18:07:06.568-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "1 - Create Table Person"
+2025-08-25T18:07:06.674-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "2 - Populate Table Person"
+2025-08-25T18:07:06.758-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "3 - Create Table Books"
+2025-08-25T18:07:06.809-03:00  WARN 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2025-08-25T18:07:06.864-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "4 - Insert Data In Books"
+2025-08-25T18:07:06.941-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "5 - Alter Table Person"
+2025-08-25T18:07:07.079-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 5 migrations to schema `test`, now at version v5 (execution time 00:00.205s)
+2025-08-25T18:07:07.249-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-25T18:07:07.386-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-08-25T18:07:07.445-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-25T18:07:08.062-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-25T18:07:08.181-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-25T18:07:10.243-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-25T18:07:10.247-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-25T18:07:10.856-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-25T18:07:12.820-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2025-08-25T18:07:12.852-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [           main] b.c.w.i.c.c.w.PersonControllerXmlTest    : Started PersonControllerXmlTest in 34.989 seconds (process running for 37.694)
+Request method:	POST
+Request URI:	http://localhost:8888/api/person/v1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Origin=https://willyanferdinando.dev.br
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": null,
+    "firstName": "Linus",
+    "lastName": "Torvalds",
+    "address": "Helsinki - Finland",
+    "gender": "Male",
+    "enabled": true
+}
+2025-08-25T18:07:15.381-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-25T18:07:15.382-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-25T18:07:15.385-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-08-25T18:07:15.580-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] b.com.wfsystems.services.PersonServices  : Creating one Person! 
+2025-08-25T18:07:15.584-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2025-08-25T18:07:15.585-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 7.0.0, Thread Name: http-nio-8888-exec-1
+2025-08-25T18:07:15.589-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2025-08-25T18:07:15.590-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2025-08-25T18:07:15.594-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-1] c.g.d.core.el.ELExpressionFactory        : jakarta.el is not supported; Failed to resolve ExpressionFactory, com.sun.el.ExpressionFactoryImpl
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Origin: https://willyanferdinando.dev.br
+Access-Control-Allow-Credentials: true
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Mon, 25 Aug 2025 21:07:15 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": 12,
+    "firstName": "Linus",
+    "lastName": "Torvalds",
+    "address": "Helsinki - Finland",
+    "gender": "Male",
+    "enabled": true,
+    "_links": {
+        "self": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "GET"
+        },
+        "findAll": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "GET"
+        },
+        "create": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "POST"
+        },
+        "update": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "PUT"
+        },
+        "disable": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "PATCH"
+        },
+        "delete": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "DELETE"
+        }
+    }
+}
+]]></system-out>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/willyan/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.10/byte-buddy-agent-1.15.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="testUpdate" classname="br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest" time="0.248">
+    <error type="jakarta.xml.bind.MarshalException"><![CDATA[jakarta.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: unable to marshal type "br.com.wfsystems.integrationtests.dto.PersonDTO" as an element because it is missing an @XmlRootElement annotation]
+	at org.glassfish.jaxb.runtime.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:268)
+	at org.glassfish.jaxb.runtime.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:197)
+	at jakarta.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:106)
+	at jakarta.xml.bind.Marshaller$marshal$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.mapping.JakartaEEMapper.serialize(JakartaEEMapper.groovy:50)
+	at io.restassured.mapper.ObjectMapper$serialize.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.mapping.ObjectMapping.serializeWithJakartaEE(ObjectMapping.groovy:226)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:153)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+	at io.restassured.internal.mapping.ObjectMapping.serialize(ObjectMapping.groovy:167)
+	at io.restassured.internal.mapping.ObjectMapping$serialize.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.body(RequestSpecificationImpl.groovy:770)
+	at br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest.testUpdate(PersonControllerXmlTest.java:97)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.sun.istack.SAXException2: unable to marshal type "br.com.wfsystems.integrationtests.dto.PersonDTO" as an element because it is missing an @XmlRootElement annotation
+	at org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:213)
+	at org.glassfish.jaxb.runtime.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:311)
+	at org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:456)
+	at org.glassfish.jaxb.runtime.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:265)
+	... 27 more
+]]></error>
+  </testcase>
+  <testcase name="testFindById" classname="br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest" time="0.173">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;application/xml&quot; doesn&apos;t match actual content-type &quot;application/json&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "application/xml" doesn't match actual content-type "application/json".
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.contentType(ResponseSpecificationImpl.groovy:443)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.contentType(ValidatableResponseOptionsImpl.java:226)
+	at br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest.testFindById(PersonControllerXmlTest.java:133)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8888/api/person/v1/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=12
+Headers:		Origin=https://willyanferdinando.dev.br
+				Accept=*/*
+				Content-Type=application/xml; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2025-08-25T18:07:16.527-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-2] b.com.wfsystems.services.PersonServices  : Finding one Person!
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Origin: https://willyanferdinando.dev.br
+Access-Control-Allow-Credentials: true
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Mon, 25 Aug 2025 21:07:16 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": 12,
+    "firstName": "Linus",
+    "lastName": "Torvalds",
+    "address": "Helsinki - Finland",
+    "gender": "Male",
+    "enabled": true,
+    "_links": {
+        "self": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "GET"
+        },
+        "findAll": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "GET"
+        },
+        "create": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "POST"
+        },
+        "update": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "PUT"
+        },
+        "disable": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "PATCH"
+        },
+        "delete": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "DELETE"
+        }
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testDisabled" classname="br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest" time="0.135">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;application/xml&quot; doesn&apos;t match actual content-type &quot;application/json&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "application/xml" doesn't match actual content-type "application/json".
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.contentType(ResponseSpecificationImpl.groovy:443)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.contentType(ValidatableResponseOptionsImpl.java:226)
+	at br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest.testDisabled(PersonControllerXmlTest.java:194)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+    <system-out><![CDATA[Request method:	PATCH
+Request URI:	http://localhost:8888/api/person/v1/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=12
+Headers:		Origin=https://willyanferdinando.dev.br
+				Accept=*/*
+				Content-Type=application/xml; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2025-08-25T18:07:16.670-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-3] b.com.wfsystems.services.PersonServices  : Disabling one Person!
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Origin: https://willyanferdinando.dev.br
+Access-Control-Allow-Credentials: true
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Mon, 25 Aug 2025 21:07:16 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": 12,
+    "firstName": "Linus",
+    "lastName": "Torvalds",
+    "address": "Helsinki - Finland",
+    "gender": "Male",
+    "enabled": false,
+    "_links": {
+        "self": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "GET"
+        },
+        "findAll": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "GET"
+        },
+        "create": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "POST"
+        },
+        "update": {
+            "href": "http://localhost:8888/api/person/v1",
+            "type": "PUT"
+        },
+        "disable": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "PATCH"
+        },
+        "delete": {
+            "href": "http://localhost:8888/api/person/v1/12",
+            "type": "DELETE"
+        }
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="deleteTest" classname="br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest" time="0.08">
+    <system-out><![CDATA[Request method:	DELETE
+Request URI:	http://localhost:8888/api/person/v1/12
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=12
+Headers:		Origin=https://willyanferdinando.dev.br
+				Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2025-08-25T18:07:16.800-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-4] b.com.wfsystems.services.PersonServices  : Deleting one Person!
+HTTP/1.1 204 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Origin: https://willyanferdinando.dev.br
+Access-Control-Allow-Credentials: true
+Date: Mon, 25 Aug 2025 21:07:16 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+]]></system-out>
+  </testcase>
+  <testcase name="testFindAll" classname="br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest" time="0.199">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;application/xml&quot; doesn&apos;t match actual content-type &quot;application/json&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "application/xml" doesn't match actual content-type "application/json".
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.contentType(ResponseSpecificationImpl.groovy:443)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.contentType(ValidatableResponseOptionsImpl.java:226)
+	at br.com.wfsystems.integrationtests.controllers.cors.withxml.PersonControllerXmlTest.testFindAll(PersonControllerXmlTest.java:162)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8888/api/person/v1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Origin=https://willyanferdinando.dev.br
+				Accept=*/*
+				Content-Type=application/xml; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2025-08-25T18:07:16.876-03:00  INFO 66873 --- [rest-with-spring-boot-and-java] [nio-8888-exec-5] b.com.wfsystems.services.PersonServices  : Finding All People!
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Access-Control-Allow-Origin: https://willyanferdinando.dev.br
+Access-Control-Allow-Credentials: true
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Mon, 25 Aug 2025 21:07:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+[
+    {
+        "id": 1,
+        "firstName": "Ayrton",
+        "lastName": "Senna",
+        "address": "Sao Paulo - Brasil",
+        "gender": "Male",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/1",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/1",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/1",
+                "type": "DELETE"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "firstName": "Leonardo ",
+        "lastName": "da Vinci",
+        "address": "Anchiano - Itália",
+        "gender": "Male",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/2",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/2",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/2",
+                "type": "DELETE"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "firstName": "Indira",
+        "lastName": "Gandhi",
+        "address": "Porbandar - India",
+        "gender": "Female",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/4",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/4",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/4",
+                "type": "DELETE"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "firstName": "Mahatma",
+        "lastName": "Gandhi",
+        "address": "Porbandar - India",
+        "gender": "Male",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/5",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/5",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/5",
+                "type": "DELETE"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "firstName": "Ali",
+        "lastName": "Muhamamd",
+        "address": "Kentucky - US",
+        "gender": "Male",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/7",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/7",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/7",
+                "type": "DELETE"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "firstName": "Nelson",
+        "lastName": "Mandela",
+        "address": "Mvezo - South Africa",
+        "gender": "Male",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/9",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/9",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/9",
+                "type": "DELETE"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "firstName": "Nelson",
+        "lastName": "Mandela",
+        "address": "Mvezo - South Africa",
+        "gender": "Male",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/10",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/10",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/10",
+                "type": "DELETE"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "firstName": "Nicola",
+        "lastName": "Tesla",
+        "address": "Smiljan - Croatia",
+        "gender": "Male",
+        "enabled": true,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8888/api/person/v1/11",
+                "type": "GET"
+            },
+            {
+                "rel": "findAll",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "GET"
+            },
+            {
+                "rel": "create",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "POST"
+            },
+            {
+                "rel": "update",
+                "href": "http://localhost:8888/api/person/v1",
+                "type": "PUT"
+            },
+            {
+                "rel": "disable",
+                "href": "http://localhost:8888/api/person/v1/11",
+                "type": "PATCH"
+            },
+            {
+                "rel": "delete",
+                "href": "http://localhost:8888/api/person/v1/11",
+                "type": "DELETE"
+            }
+        ]
+    }
+]
+]]></system-out>
+  </testcase>
+</testsuite>
