@@ -22,7 +22,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.wfsystems.config.TestConfigs;
+import br.com.wfsystems.integrationtests.dto.AccountCredentialsDTO;
 import br.com.wfsystems.integrationtests.dto.PersonDTO;
+import br.com.wfsystems.integrationtests.dto.TokenDTO;
 import br.com.wfsystems.integrationtests.dto.wrappers.WrapperPersonDTO;
 import br.com.wfsystems.integrationtests.testcontainers.AbstractIntegrationTest;
 import io.restassured.builder.RequestSpecBuilder;
@@ -38,6 +40,7 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest {
         private static RequestSpecification specification;
         private static ObjectMapper objectMapper;
         private static PersonDTO person;
+        private static TokenDTO tokenDto;
 
         @BeforeAll
         static void setUp() {
@@ -46,20 +49,47 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest {
                 objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
                 person = new PersonDTO();
+                tokenDto = new TokenDTO();
+
+                
         }
 
-        @Test
-        @Order(1)
-        void testCreate() throws JsonMappingException, JsonProcessingException {
-                mockPerson();
+         @Test
+    @Order(1)
+    void signin() {
+        AccountCredentialsDTO credentials =
+            new AccountCredentialsDTO("leandro", "admin123");
 
-                specification = new RequestSpecBuilder()
+        tokenDto = given()
+                .basePath("/auth/signin")
+                    .port(TestConfigs.SERVER_PORT)
+                    .contentType(MediaType.APPLICATION_JSON_VALUE)
+                .body(credentials)
+                    .when()
+                .post()
+                    .then()
+                    .statusCode(200)
+                        .extract()
+                        .body()
+                        .as(TokenDTO.class);
+
+        assertNotNull(tokenDto.getAccessToken());
+        assertNotNull(tokenDto.getRefreshToken());
+
+         specification = new RequestSpecBuilder()
                                 .addHeader(TestConfigs.HEADER_PARAM_ORIGIN, TestConfigs.ORIGIN_WFERDINANDO)
+                                .addHeader(TestConfigs.HEADER_PARAM_AUTHORIZATION, "Bearer " + tokenDto.getAccessToken())
                                 .setBasePath("/api/person/v1")
                                 .setPort(TestConfigs.SERVER_PORT)
                                 .addFilter(new RequestLoggingFilter(LogDetail.ALL))
                                 .addFilter(new ResponseLoggingFilter(LogDetail.ALL))
                                 .build();
+    }
+
+        @Test
+        @Order(1)
+        void testCreate() throws JsonMappingException, JsonProcessingException {
+                mockPerson();
 
                 var content = given(specification)
                                 .contentType(MediaType.APPLICATION_JSON_VALUE)

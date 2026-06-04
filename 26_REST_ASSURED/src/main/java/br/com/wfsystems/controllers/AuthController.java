@@ -57,7 +57,7 @@ public class AuthController implements AuthControllerDocs {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Invalid client request!");
         }
 
-        return ResponseEntity.ok(token);
+        return token;
     }
 
     @Override
