@@ -12,6 +12,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
     - uses: actions/checkout@v4
@@ -23,19 +24,27 @@ jobs:
         password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
      
     - name: Setup Java 21     
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v4
       with:
         java-version: '21'
-        distribution: 'adopt' # See 'Supported distributions' for available options
+        distribution: 'adopt'
+        cache: 'maven'
         
     
     - name: Build Application .jar
       working-directory: ./28_DOKCER_APPLICATION/rest-with-spring-boot-and-java
-      run: mvn clean package
+      run: mvn clean package -DskipTests
+      timeout-minutes: 20
+    
+    - name: Run Integration Tests
+      working-directory: ./28_DOKCER_APPLICATION/rest-with-spring-boot-and-java
+      run: mvn test -X
+      timeout-minutes: 30
     
     - name: Docker Compose Build
       working-directory: ./28_DOKCER_APPLICATION/
       run: docker compose build
+      timeout-minutes: 15
     
     - name: Push to Docker Hub Container Registry
       run: |
