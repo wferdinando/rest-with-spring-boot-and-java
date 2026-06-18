@@ -3,7 +3,7 @@ server:
 cors:
   originPatterns: http://localhost:8080,https://willyanferdinando.dev.br, http://localhost:3000
 file:
-  upload-dir: /home/wferd/workspace/spring/rest-with-spring-boot-and-java/28_DOKCER_APPLICATION/rest-with-spring-boot-and-java/uploadDir
+  upload-dir: /home/runner/work/rest-with-spring-boot-and-java/UploadDir
 security:
   jwt:
     token:
