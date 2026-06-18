@@ -28,3 +28,18 @@ jobs:
         java-version: '21'
         distribution: 'temurin' # See 'Supported distributions' for available options
         cache: maven
+    
+    - name: Build Application .jar
+      working-directory: ./28_DOKCER_APPLICATION/rest-with-spring-boot-and-java
+      run: mvn clean package
+    
+    - name: Docker Compose Build
+      working-directory: ./28_DOKCER_APPLICATION/
+      run: docker compose build
+    
+    - name: Push to Docker Hub Container Registry
+      run: |
+        docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-wfsystems:latest  ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-wfsystems:${{ github.run_id }}
+      
+        docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-wfsystems:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-wfsystems:${{ github.run_id }}
