@@ -27,7 +27,7 @@ jobs:
       with:
         java-version: '21'
         distribution: 'adopt' # See 'Supported distributions' for available options
-        cache: maven
+        
     
     - name: Build Application .jar
       working-directory: ./28_DOKCER_APPLICATION/rest-with-spring-boot-and-java
