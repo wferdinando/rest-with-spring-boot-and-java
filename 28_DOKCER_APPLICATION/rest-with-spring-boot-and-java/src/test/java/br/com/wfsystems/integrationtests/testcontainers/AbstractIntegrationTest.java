@@ -21,7 +21,33 @@ public class AbstractIntegrationTest {
         static MySQLContainer<?> mysql = new MySQLContainer<>("mysql:9.1.0");
 
         private static void startContainers() {
-            Startables.deepStart(Stream.of(mysql)).join();
+            int maxRetries = 3;
+            int retryCount = 0;
+            Exception lastException = null;
+
+            while (retryCount < maxRetries) {
+                try {
+                    Startables.deepStart(Stream.of(mysql)).join();
+                    System.out.println("Container MySQL iniciado com sucesso!");
+                    return; // Sucesso
+                } catch (Exception e) {
+                    lastException = e;
+                    retryCount++;
+                    System.out.println("Falha ao iniciar o container, tentando novamente... (tentativa " + retryCount + " de " + maxRetries + ")");
+                    
+                    if (retryCount < maxRetries) {
+                        try {
+                            Thread.sleep(3000); // Aguarda 3 segundos antes de tentar novamente
+                        } catch (InterruptedException ie) {
+                            Thread.currentThread().interrupt();
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // Se chegou aqui, todas as tentativas falharam
+            throw new RuntimeException("Falha ao iniciar o container MySQL após " + maxRetries + " tentativas", lastException);
         }
 
         private Map<String, String> createConnectionConfiguration() {
